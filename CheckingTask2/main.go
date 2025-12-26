@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Dirolka/CheckingTask2/Agents"
-	"github.com/Dirolka/CheckingTask2/Tickets"
+	"github.com/Dirolka/AD/CheckingTask2/Agents"
+	"github.com/Dirolka/AD/CheckingTask2/Tickets"
 )
 
 func main() {
@@ -77,7 +77,7 @@ func createTicket(in *bufio.Scanner, store *Tickets.TicketStore) {
 	id := readLine(in, "Ticket ID: ")
 	title := readLine(in, "Title: ")
 	desc := readLine(in, "Description: ")
-	priority, err := readInt(in, "Priority (1..3): ")
+	priority, err := readInt(in, "Priority (1-3): ")
 	if err != nil {
 		fmt.Println("Invalid priority")
 		return
